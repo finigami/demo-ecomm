@@ -25,6 +25,42 @@ frontend/dist/
 frontend/.next/
 frontend/out/
 
+# Build artifacts and compiled files
+build/
+dist/
+*.tsbuildinfo
+*.js.map
+*.css.map
+
+# Webpack build artifacts
+webpack-stats.json
+webpack-bundle-analyzer-report.html
+
+# Rollup build artifacts
+rollup-stats.json
+
+# Vite build artifacts
+.vite/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Compiled JavaScript (if not using bundler)
+*.compiled.js
+*.min.js
+*.min.css
+
+# Build tool specific artifacts
+.esbuild/
+.turbo/
+.vercel/
+.netlify/
+
+# Static site generators
+_site/
+_site/
+site/
+
 # E2E tests
 e2e-tests/node_modules/
 e2e-tests/test-results/
