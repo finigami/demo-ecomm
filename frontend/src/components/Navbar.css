@@ -1,0 +1,147 @@
+.navbar {
+  background-color: #2c3e50;
+  color: white;
+  padding: 0.7rem 0; /* Reduced from 1rem */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.05rem; /* Reduced from 1.5rem */
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar-brand:hover {
+  color: #3498db;
+}
+
+.navbar-search {
+  display: flex;
+  flex: 1;
+  max-width: 400px;
+  margin: 0 1rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.35rem; /* Reduced from 0.5rem */
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 0.875rem; /* Reduced from 1rem */
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #3498db;
+}
+
+.search-button {
+  padding: 0.35rem 0.7rem; /* Reduced from 0.5rem 1rem */
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 0.875rem; /* Reduced from 1rem */
+}
+
+.search-button:hover {
+  background-color: #2980b9;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.35rem; /* Reduced from 0.5rem */
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cart-link {
+  background-color: #e74c3c;
+  font-weight: bold;
+}
+
+.cart-link:hover {
+  background-color: #c0392b;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-greeting {
+  color: #ecf0f1;
+  font-size: 0.8rem; /* Reduced from 0.9rem */
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.35rem 0.7rem; /* Reduced from 0.5rem 1rem */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem; /* Reduced from 0.9rem */
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+.auth-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin-link {
+  background-color: #e74c3c;
+  font-weight: bold;
+}
+
+.admin-link:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .navbar-search {
+    max-width: none;
+    margin: 0.5rem 0;
+  }
+  
+  .navbar-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
