@@ -23,6 +23,7 @@ describe('User Model', () => {
         id: 1,
         username: 'testuser',
         email: 'test@example.com',
+        role: 'user',
         created_at: '2023-01-01T00:00:00Z'
       };
 
@@ -73,6 +74,7 @@ describe('User Model', () => {
         id: 1,
         username: 'testuser',
         email: 'test@example.com',
+        role: 'user',
         created_at: '2023-01-01T00:00:00Z'
       };
 
@@ -81,7 +83,7 @@ describe('User Model', () => {
       const result = await User.findById(1);
 
       expect(pool.query).toHaveBeenCalledWith(
-        'SELECT id, username, email, created_at FROM users WHERE id = $1',
+        'SELECT id, username, email, role, created_at FROM users WHERE id = $1',
         [1]
       );
       expect(result).toEqual(mockUser);
@@ -91,7 +93,8 @@ describe('User Model', () => {
   describe('validatePassword', () => {
     it('should return true for valid password', async () => {
       const password = 'password123';
-      const hashedPassword = '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi';
+      // Generate a proper hash for the test password
+      const hashedPassword = await require('bcryptjs').hash(password, 10);
 
       const result = await User.validatePassword(password, hashedPassword);
 
