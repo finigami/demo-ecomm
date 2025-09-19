@@ -6,9 +6,10 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test": "jest --verbose",
+    "test:watch": "jest --watch --verbose",
+    "test:coverage": "jest --coverage --verbose",
+    "test:detailed": "jest --verbose --no-coverage --testNamePattern=.*"
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -29,6 +30,7 @@
   },
   "jest": {
     "testEnvironment": "node",
+    "verbose": true,
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/server.js"

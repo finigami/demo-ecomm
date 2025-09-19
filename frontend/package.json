@@ -24,7 +24,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --verbose",
+    "test:watch": "react-scripts test --watch --verbose",
+    "test:coverage": "react-scripts test --coverage --verbose",
+    "test:detailed": "react-scripts test --verbose --no-coverage",
     "test:e2e": "cypress run",
     "test:e2e:open": "cypress open",
     "eject": "react-scripts eject"
